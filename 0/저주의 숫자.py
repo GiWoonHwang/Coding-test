@@ -28,6 +28,7 @@ n:int = 40
 answer:int = 0
 for _ in range(n):
     answer += 1
+    print('for',answer)
     while answer % 3 == 0 or '3' in str(answer):
-        print(answer)
+        # print(answer)
         answer += 1
