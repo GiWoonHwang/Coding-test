@@ -23,3 +23,7 @@ numbers = sorted(numbers, reverse=True)
 answer:int = numbers[0] * numbers[1]
 print(answer)
 
+# 다른 사람의 풀이 (섹시하다)
+def solution(numbers):
+    numbers.sort()
+    return numbers[-2] * numbers[-1]
