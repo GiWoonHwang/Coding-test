@@ -18,8 +18,6 @@ my_string	result
 유의사항
 연속된 숫자도 각각 한 자리 숫자로 취급합니다.
 '''
-
-
 from typing import *
 import re # 정규식 모듈
 
