@@ -38,7 +38,7 @@ function solution(babbling) {
         console.log("remainWord", remainWord);
         console.log("true or false ", wordSet.has(remainWord));
         
-        if (remainWord === prevWord) break;
+        if (remainWord === prevWord) break; // 최대 한번씩만 해주게 하는 장치
         prevWord = remainWord;
         console.log("remainWord", remainWord);
         
