@@ -24,4 +24,5 @@ for(let i = 2; i <= parseInt(Math.sqrt(n)); i++) {
     console.log(i)
     base = base.filter(el => el%i != 0 || el <= i)
 }
-return n - base.length
+
+return n - base.length // 모르겠음
