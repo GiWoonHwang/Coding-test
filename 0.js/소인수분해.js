@@ -20,8 +20,8 @@ n	result
 420을 소인수분해하면 2 * 2 * 3 * 5 * 7 입니다. 따라서 [2, 3, 5, 7]을 return합니다.
 */
 
-let answer = []
-let n = 12
+let answer = [];
+let n = 12;
 let i = 2;
 while (i <= n) {
     if (n % i === 0) {
