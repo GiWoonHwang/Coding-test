@@ -26,4 +26,29 @@ board	                                                                          
 모든 지역에 지뢰가 있으므로 안전지역은 없습니다. 따라서 0을 return합니다.
 */
 
-// 못품
+// 못품 => 푸는 중
+let board    = [[0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 0, 0]];
+let outside  = [[-1,0], [-1,-1], [-1,1], [0,-1],[0,1],[1,0], [1,-1], [1,1]]; // 폭탄이 있는 곳이 0,0으로 기준잡을 때  위험지역
+let safezone = 0;
+
+// console.log(board.forEach((row,y,self)=>{
+//     console.log('row',row)
+//     console.log("y", y);
+//     console.log("self", self); 
+// }))
+
+
+board.forEach((row, y, self) => row.forEach((it, x) => {
+    if (it === 1) return false; // 여기까지 이해함
+    return outside.some(([oy, ox]) => !!self[oy + y]?.[ox + x])  ? false : safezone++;
+}));
+return safezone;
+
+
+
+// board.forEach((row, y, self) => row.forEach((it, x) => {
+//     if (it === 1) return false;
+//     return outside.some(([oy, ox]) => !!self[oy + y]?.[ox + x])
+//            ? false : safezone++;
+// }));
+// return safezone;
