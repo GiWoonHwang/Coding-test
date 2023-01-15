@@ -8,8 +8,8 @@ babbling의 각 문자열에서 "aya", "ye", "woo", "ma"는 각각 최대 한 �
 즉, 각 문자열의 가능한 모든 부분 문자열 중에서 "aya", "ye", "woo", "ma"가 한 번씩만 등장합니다.
 문자열은 알파벳 소문자로만 이루어져 있습니다.
 입출력 예
-babbling	result
-["aya", "yee", "u", "maa", "wyeoo"]	1
+babbling	                                result
+["aya", "yee", "u", "maa", "wyeoo"]	        1
 ["ayaye", "uuuma", "ye", "yemawoo", "ayaa"]	3
 입출력 예 설명
 입출력 예 #1
@@ -29,8 +29,30 @@ babbling	result
 using namespace std; // namespace는 이름 공간이고 std는 클래스이다. using 사용하겠다 namespace에 있는 std 클래스에 정의되어 있는 함수들을
 
 int solution(vector<string> babbling){
-    int answer = 0;
-    string temp = "";
+    int answer   = 0;
+    string temp  = "";
+    string temp2 = "";
 
-
+    for(int i = 0; i < babbling.size(); i++)
+    {
+        string s = babbling[i];
+        temp  = "";
+        temp2 = "";
+        for(int i=0; i<s.size(); i++)
+        {
+            temp += s[i];
+            if(temp == "aya" || temp == "ye" || temp == "woo" || temp == "ma")
+            {
+                if(temp == temp2)
+                    break;
+                else
+                    temp2 = temp;
+                temp = "";
+            }
+            
+        }
+        if(temp == "")
+            answer ++;
+    }
+    return answer; 
 }
