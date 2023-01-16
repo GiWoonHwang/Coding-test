@@ -16,3 +16,24 @@ array	        result
 
 [10, 29]에는 7이 없으므로 0을 return 합니다.
 */
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(vector<int> array){
+    int answer = 0;
+    for(auto num : array) // auto: num의 자료형을 추론하도록 설정해준다
+    {
+        while (num > 0) // while문을 써야 77같은 수를 처리할 수 있다. 77 / 10 == 7 이니까 while문이 한번 더 돌면서 7의 개수를 찾아 answer를 ++ 해준다.
+        {
+            if((num % 10 == 7))
+                answer ++;
+            num /= 10; // 10으로 나누어 0을 만든 후 while문을 끝낸다. 
+                printf("10진 정수 출력(부호O) : %d\n", num);
+            }
+        
+    }
+
+}
