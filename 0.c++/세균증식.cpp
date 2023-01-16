@@ -16,3 +16,13 @@ n	t	result
 
 처음엔 7마리, 1시간 후엔 14마리, 2시간 후엔 28마리, ..., 15시간 후엔 229376마리가 됩니다. 따라서 229,376을 return합니다.
 */
+
+#include <string>
+#include <vector>
+#include <cmath> // 수학 관련 메서드 
+using namespace std;
+
+int solution(int n, int t){
+    int answer = n * pow(2,t);
+    return answer;
+}
