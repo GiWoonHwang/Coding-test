@@ -25,3 +25,30 @@ num = 5, total = 15인 경우 [1, 2, 3, 4, 5]를 return합니다.
 
 설명 생략
 */
+
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+using namespace std;
+
+vector<int> solution(int num, int total){ // vector안에 int로 된 값을 반환하는 함수이다.
+    vector<int> answer;
+    int mid   = total/num; //12/3 = 4
+    int first = 0;
+
+    if(num % 2 == 0)
+        first = mid - (num / 2 -1);
+    else
+        first = mid - (num / 2);
+    
+    for(int i = 0; i < num; ++i, ++ first)
+    {
+        answer.push_back(first);
+
+    }
+
+    return answer;
+
+}
