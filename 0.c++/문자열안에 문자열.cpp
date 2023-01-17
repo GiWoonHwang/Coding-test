@@ -21,3 +21,13 @@ str1	                    str2	result
 
 "AbcAbcA" str1에 str2가 없으므로 2를 return합니다.
 */
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(string str1, string str2){
+    return (str1.find(str2) == string::npos)?2:1;
+}
+
