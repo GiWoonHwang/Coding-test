@@ -44,6 +44,7 @@
         "xstring": "c",
         "xtr1common": "c",
         "xutility": "c",
-        "set": "cpp"
+        "set": "cpp",
+        "bitset": "cpp"
     }
 }
