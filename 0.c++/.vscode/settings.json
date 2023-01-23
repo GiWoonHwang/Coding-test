@@ -45,6 +45,8 @@
         "xtr1common": "c",
         "xutility": "c",
         "set": "cpp",
-        "bitset": "cpp"
+        "bitset": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
     }
 }
