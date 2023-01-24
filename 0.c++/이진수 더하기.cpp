@@ -26,7 +26,7 @@ using namespace std;
 
 
 // 비트 세트의 내용을 to_ulong, unsigned =>  전체 비트를 unsigned long / unsigned long long의 값으로 바꿔준다
-
+// 25일 다시보기
 string solution(string bin1, string bin2){   
 
     auto tmp = bitset<32>(bitset<32>(bin1).to_ulong() + bitset<32>(bin2).to_ulong()).to_string(); // 비트로 바꿔서 계산 후 => to_string 근데 왜 32비트로 바꾸는지 모르겠다.    
