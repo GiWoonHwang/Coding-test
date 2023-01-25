@@ -48,5 +48,40 @@ int main(){
         }
         cout << endl;
     } 
+
+
+    /*
+    배열의 길이 자동 설정
+    1차원 배열과 마찬가지로 2차원 배열도 길이를 명시하지 않고, 자동으로 배열의 길이를 설정할 수 있다.
+    단 행의 길이는 생략할 수 있지만, 열의 길이는 반드시 명시해야 합니다.
+    다음 예제는 앞선 예제에서 행의 길이를 생략한 예제로, 같은 결과를 출력하빈다
+    이 예제에서의 행의 길이를 명시하고, 열의 길이를 생략하면 컴파일할 때 오류가 발생하는 것을 확인할 수 있다.    
+    */
+   int arr_col_len, arr_row_len;
+
+    //int arr[3][] = {
+
+    int arr[][4] = {    
+        {10, 20},
+
+        {30, 40, 50, 60},
+
+        {0, 0, 70, 80}
+    };
+
+    arr_col_len = sizeof(arr[0]) / sizeof(arr[0][0]);                 // 2차원 배열의 열의 길이를 계산함
+
+    arr_row_len = (sizeof(arr) / arr_col_len) / sizeof(arr[0][0]); // 2차원 배열의 행의 길이를 계산함    
+
+    cout << "arr의 배열 요소의 값" << endl;
+
+    for (int i = 0; i < arr_row_len; i++)
+    {
+        for (int j = 0; j < arr_col_len; j++)
+        {
+            cout << setw(4) << arr[i][j];
+        }
+        cout << endl;
+    }
     return 1;
 }
