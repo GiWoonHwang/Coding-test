@@ -54,7 +54,24 @@ int solutin(int a, int b){
     b /= gcd_num;
 
     while(true){
-        if(b)
-    
+        if(b % 2 ==0){
+            b /= 2;
+        }
+        else{
+            break;
+        }    
     }
+
+    while(true){
+        if(b%5 == 0){
+            b /= 5;
+        }
+        else{
+            break;
+        }
+    }
+    if (b == 1){
+        return 1;
+    }
+    return 2;
 }
