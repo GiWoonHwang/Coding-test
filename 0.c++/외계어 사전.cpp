@@ -35,6 +35,7 @@ spell	                dic	                                    result
 
 using namespace std;
 
+// 반복문을 돌며 find 메소드를 사용해서 한번이라도 false가 나온다면 만들 수 없는 문자이다.
 int solution(vector<string> spell, vector<string> dic) {
     int answer = 2;
 
