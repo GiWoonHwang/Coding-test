@@ -42,6 +42,7 @@ int solution(int hp){
     hp = hp % 3;
     answer += hp;
     
+    return answer;
 
 }
 
