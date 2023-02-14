@@ -27,3 +27,4 @@ function solution(arr, divisor){
     
     return result.length > 0 ? result : [-1]; // 나누어 떨어지는 수가 없는 경우 삼항연산자로 체크
 }
+
