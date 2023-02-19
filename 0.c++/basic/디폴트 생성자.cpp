@@ -31,62 +31,62 @@ C++에서 사용자가 직접 디폴트 생성자를 정의하는 방법은 다�
 #include <iostream>
 using namespace std;
 
-int main(void)
+// int main(void)
 
-{
+// {
 
-    Book web_book; // 디폴트 생성자의 암시적 호출
+//     Book web_book; // 디폴트 생성자의 암시적 호출
 
-    // 생성자가 호출되어 멤버 변수인 percent_가 초기화되었는지를 확인함.
+//     // 생성자가 호출되어 멤버 변수인 percent_가 초기화되었는지를 확인함.
 
-    cout << web_book.percent_ << endl;
+//     cout << web_book.percent_ << endl;
 
-    return 0;
+//     return 0;
 
-}
-
- 
-
-Book::Book(const string& title, int total_page)
-
-{
-
-    title_ = title;
-
-    total_page_ = total_page;
-
-    current_page_ = 0;
-
-    set_percent();
-
-}
+// }
 
  
 
-void Book::set_percent()
+// Book::Book(const string& title, int total_page)
 
-{
+// {
 
-    percent_ = (double) current_page_ / total_page_ * 100;
+//     title_ = title;
 
-}
+//     total_page_ = total_page;
 
-class Book
+//     current_page_ = 0;
 
-{
+//     set_percent();
 
-public:
+// }
 
-    string title_;       // 책의 제목
+ 
 
-    int total_page_;     // 총 페이지
+// void Book::set_percent()
 
-    double percent_;     // 해당 책을 읽은 정도
+// {
 
-    void Move(int page); // 현재 페이지를 전달받은 페이지로 이동시킴.
+//     percent_ = (double) current_page_ / total_page_ * 100;
 
-    void Open();         // 현재 페이지로 책을 엶.
+// }
 
-    void Read();         // 현재 페이지에서 다음 페이지로 넘어감.
+// class Book
 
-};
+// {
+
+// public:
+
+//     string title_;       // 책의 제목
+
+//     int total_page_;     // 총 페이지
+
+//     double percent_;     // 해당 책을 읽은 정도
+
+//     void Move(int page); // 현재 페이지를 전달받은 페이지로 이동시킴.
+
+//     void Open();         // 현재 페이지로 책을 엶.
+
+//     void Read();         // 현재 페이지에서 다음 페이지로 넘어감.
+
+// };
