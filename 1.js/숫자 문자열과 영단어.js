@@ -79,8 +79,28 @@ function solution(s) {
     147eight
     1478
     1478
+
+    해설 추가
+    1. 문자열을 영문으로 표기된 숫자 기준으로 split 한다. 그렇게되면 영문자로 표기된 숫자는 사라지고 양옆으로 남은 문자열들이 arr배열에 들어간다.
+
+    2. join을 통해서 arr배열을 다시 합쳐주면 arr배열 원소들 사이에 i 가 들어가면서 새로운 문자열이 생성된다.        
+
+    'one4seveneight'의 경우 split을 통해 [ '', '4seveneight'] 이 생성된다.
+
+    이후 join(i)를 통하여 두 원소 사이에 '1' (i는 1인 상태기 때문에) 이 들어가게 되어 14seveneight 이 생성된다.
+
+    이후 for문을 계속 따라가다보면 
+
+    [ '14', 'eight'] // split 을 통해 생성.
+
+    147eight // join을 통해 생성.
+
+    [ '147', ''] // split을 통해 생성.
+
+    1478 // join을 통해 생성
     */
-      console.log(s)
+
+    console.log(s)
     }
     return parseInt(s);
   }
