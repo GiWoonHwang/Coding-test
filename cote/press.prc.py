@@ -42,3 +42,7 @@ def solution(s):
             
     
 
+s = 'abcabcabcabcdededededede'
+for i in range(1, len(s)+1):
+    for j in range(i, len(s)+1, i):
+        print('s[j:i+j]',s[j:i+j])
