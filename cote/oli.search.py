@@ -49,6 +49,7 @@ def solution(land):
                 ny = y + dy[i]
                 if nx < 0 or ny < 0 or nx >= n or ny >= m:
                     continue
+                # 방문하지 않고, 석유를 캘 수 있으면  
                 if visited[nx][ny] == 0 and land[nx][ny] == 1:
                     visited[nx][ny] = 1
                     q.append((nx,ny))
