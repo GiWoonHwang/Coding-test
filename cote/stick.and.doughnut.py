@@ -38,8 +38,6 @@ def solution(edges):
             
     answer[1] = node_cnt[answer[0]][0] - answer[2] - answer[3]
     return answer 
-
-
         
 
 
